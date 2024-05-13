@@ -1,0 +1,38 @@
+Entendido, aquí tienes una versión modificada del código que muestra la imagen de forma nítida solo cuando el cursor pasa sobre ella:
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.image-container {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.blurred-image {
+    width: 100%;
+    height: auto;
+    transition: filter 0.5s ease;
+    filter: blur(15px); /* Aplica un efecto de desenfoque por defecto */
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.image-container:hover .blurred-image {
+    filter: none; /* Elimina el efecto de des

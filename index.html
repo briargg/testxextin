@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Especifica la configuración del viewport para dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Estilo CSS para ocultar el contenido dentro de esta etiqueta -->
+   
+    <!-- Enlace al icono del sitio web (favicon) -->
+    <link rel="shortcut icon" href="">
+    <!-- Enlace a un feed RSS -->
+    <link href="/rss.xml?locale=es" rel="alternate" title="RSS" type="application/rss+xml">
+    <!-- Enlace a etiquetas ICRA (Internet Content Rating Association) -->
+    <link rel="meta" href="" type="application/rdf+xml" title="ICRA labels">
+    <!-- Metaetiqueta para verificar la propiedad del sitio web en Pinterest -->
+    <title>xestails - Descubre el mejor contenido erótico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBRS_XzZsIW6gu7BT-4pOFd01BBVEXlA2U",
+          authDomain: "xestails.firebaseapp.com",
+          projectId: "xestails",
+          storageBucket: "xestails.appspot.com",
+          messagingSenderId: "573014267308",
+          appId: "1:573014267308:web:1550ceeede9dd304421609",
+          measurementId: "G-QXHDWQ1BKW"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+    <!-- Encabezado -->
+    <header>
+        <img src="imagenes/Logo_xextails-removebg-preview.png" alt="Nombre del Sitio" class="logo">
+        
+        
+        
+        <nav id="navbar" class="nav">
+            <div class="logo">
+              
+            </div>
+            <div class="menu-toggle">&#9776;</div> <!-- Icono de menú desplegable para dispositivos móviles -->
+            <ul class="nav-list">
+              <li>
+                <a href="#inicio">iNICIO
+            
+                </a>
+              </li>
+              <li>
+                <a href="#galerias">GALERIA</a>
+              </li>
+              <li>
+                <a href="#contacto">Contacto</a>
+              </li>
+            </ul>
+          </nav>
+        <!-- Botón de menú para dispositivos móviles -->
+        <div class="mobile-menu-btn">
+            <i class="fa fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Sección de inicio -->
+    <section id="inicio" class="inicio-section">
+        <h1></h1>
+        <p></p>
+        <a href="suscripcion.html" class="btn">Suscríbete</a>
+    </section>
+
+    <!-- Sección de galerías -->
+    
+    <section id="galerias" class="galerias-section">
+        <h2>Galerías</h2>
+        <div class="gallery-container">
+            <div class="gallery-item"> <!-- Primer elemento de la galería -->
+                <a href="galeriaclaudia.html"><img src="galeriaimagenesclaudia/Inicio.png" alt=""></a> <!-- Enlace con imagen que redirige a pagina1.html -->
+            </div>
+            <div class="gallery-item"> <!-- Segundo elemento de la galería -->
+                <a href="pagina2.html"><img src="sofia/Inicio (2).png" alt=""></a> <!-- Enlace con imagen que redirige a pagina2.html -->
+            </div>
+            <!-- Agrega más elementos .gallery-item según sea necesario -->
+        
+            
+        </div>
+    
+    </section>
+            <!-- Agrega más imágenes según sea necesario -->
+        
+    </section>
+
+    <!-- Sección de contacto -->
+    <section id="contacto" class="contacto-section">
+        <h2>Contacto</h2>
+        <p></p>
+        <ul>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
+
+    <!-- Sección de suscripción -->
+    <section id="suscripcion" class="suscripcion-section">
+        <h2>Suscripción</h2>
+        <p>¡Únete a nuestra comunidad y accede a contenido exclusivo!</p>
+        <form action="procesar_suscripcion.php" method="post">
+            <input type="email" name="email" placeholder="Ingresa tu email" required>
+            <button type="submit">Suscribirse</button>
+        </form>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 xestails.com - Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        // JavaScript aquí
+        document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navList = document.querySelector('.nav-list');
+  menuToggle.addEventListener('click', () => {
+    navList.classList.toggle('active');
+        
+          });
+        });
+      </script>
+</body>
+</html>
+```

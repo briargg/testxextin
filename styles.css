@@ -1,0 +1,208 @@
+Para que este CSS se adapte a cualquier tipo de pantalla, especialmente a celulares, puedes utilizar técnicas de diseño responsivo. Aquí te muestro cómo puedes modificar el CSS para lograr esto:
+
+```css
+/* Reset de estilos */
+* {
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%; /* Modificado para adaptarse al ancho completo de la pantalla */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: auto;
+    padding: 0 20px;
+}
+
+header {
+    position: relative;
+    height: 100vh; /* Establece la altura del encabezado al 100% del viewport */
+    background-image: url('imagenes/pexel.jpg'); /* Cambia 'imagen.jpg' por la ruta de tu imagen */
+    background-size: cover; /* Ajusta la imagen para que cubra todo el encabezado */
+    background-position: center; /* Centra la imagen */
+}
+
+/* CSS */
+.logo {
+    max-width: 100%; /* La imagen no superará el ancho del contenedor */
+    height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+}
+
+
+/* Estilo del botón de menú para dispositivos móviles */
+#toggle {
+    display: none;
+}
+
+label[for="toggle"] {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Estilo de la lista de elementos del menú */
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+li {
+    margin-left: 20px;
+}
+
+/* Estilo de los enlaces del menú */
+a {
+    color: rgba(255, 255, 255, 0.26);
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(245, 8, 206, 0.226); /* Fondo transparente */
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.5);
+    z-index: 10;
+  }
+
+  
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    width: 80%; /* Ancho del menú */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco transparente */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 9;
+  }
+
+  .nav-list.active {
+    transform: translateX(0);
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 20px;
+    cursor: pointer;
+    z-index: 11; /* Asegurar que esté sobre el menú desplegable */
+  }
+
+  .menu-toggle i {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+  .nav-list li {
+    margin-bottom: 20px;
+  }
+
+  .nav-list a {
+    color: #f7f0f0;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .nav-list a:hover {
+    color: rgba(248, 1, 137, 0.973);
+  }
+
+  @media screen and (min-width: 768px) {
+    .nav {
+      justify-content: flex-end;
+    }
+
+    .nav-list {
+      flex-direction: row;
+      position: relative;
+      height: auto;
+      width: auto;
+      background-color: transparent;
+      transform: none; /* Eliminar transformación */
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    .nav-list li {
+      margin: 0 15px;
+    }
+  }
+
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.gallery-container {
+    display: flex; /* Mostrar los elementos en línea */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan a la siguiente línea si no caben en la misma */
+    justify-content: space-around; /* Distribuir los elementos de manera uniforme a lo largo del eje principal */
+}
+
+.gallery-item {
+    width: calc(33.33% - 20px); /* Establecer el ancho de cada elemento (33.33% del ancho del contenedor menos el margen) */
+    margin: 10px; /* Añadir un pequeño margen entre los elementos */
+    height: auto;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.gallery-item img {
+    width: 100%; /* Asegurar que las imágenes ocupen todo el ancho disponible */
+    height: auto; /* Permitir que la altura se ajuste automáticamente para mantener la proporción */
+    transition: transform 0.5s, opacity 0.5s; 
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Aumentar ligeramente el tamaño de la imagen al pasar el cursor sobre ella */
+    opacity: 0.8; /* Reducir ligeramente la opacidad de la imagen al pasar el cursor sobre ella */
+}
+
+
+
+
+/* Estilos específicos para pantallas pequeñas (menos de 768px de ancho) */
+@media (max-width: 767px) {
+    .gallery {
+        padding: 10px; /* Reduce el espacio alrededor de los elementos en pantallas pequeñas */
+    }
+    
+    .gallery-item {
+        margin-right: 5px; /* Reduce el espacio entre los elementos en pantallas pequeñas */
+    }
+}
+
+

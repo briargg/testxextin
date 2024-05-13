@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen con efecto de desenfoque</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="image-container">
+        <img src="galeriaimagenesclaudia/2024-04-09_19-58-00_4781.png" alt="Imagen" class="blurred-image">
+        <div class="overlay"></div>
+        <div class="text-overlay">
+            <h2>Título de la imagen</h2>
+            <p>Descripción de la imagen...</p>
+            <div class="like-container">
+                <button class="like-button" onclick="likeImage(this)">❤️</button>
+                <span class="like-count">0</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Función para manejar el clic en el botón de "Me gusta"
+        function likeImage(button) {
+            // Obtener el elemento de contador de "Me gusta" asociado
+            var likeCount = button.nextElementSibling;
+            // Obtener el valor actual del contador
+            var count = parseInt(likeCount.textContent);
+            // Incrementar el contador en 1
+            count++;
+            // Actualizar el contador de "Me gusta"
+            likeCount.textContent = count;
+        }
+    </script>
+</body>
+</html>
